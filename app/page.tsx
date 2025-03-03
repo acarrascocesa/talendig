@@ -1,11 +1,18 @@
-import Image from "next/image"
-import Link from "next/link"
-import { MesCard } from "@/components/mes-card"
-import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
-import { Navbar } from "@/components/navbar"
-import { InscriptionForm } from "@/components/inscription-form"
-import { Facebook, Instagram, Linkedin, Phone, MessageCircle, Mail } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { MesCard } from "@/components/mes-card";
+import { Button } from "@/components/ui/button";
+import { CheckCircle } from "lucide-react";
+import { Navbar } from "@/components/navbar";
+import { InscriptionForm } from "@/components/inscription-form";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Phone,
+  MessageCircle,
+  Mail,
+} from "lucide-react";
 
 export default function Home() {
   const mesesContenido = [
@@ -109,7 +116,7 @@ export default function Home() {
         "Preparación para el mercado laboral",
       ],
     },
-  ]
+  ];
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -124,9 +131,14 @@ export default function Home() {
               <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                 Técnico en Desarrollo de Software en 10 meses
               </h1>
-              <p className="text-xl md:text-2xl mb-8 font-light">Formación de vanguardia en alianza estratégica</p>
+              <p className="text-xl md:text-2xl mb-8 font-light">
+                Formación de vanguardia en alianza estratégica
+              </p>
               <Link href="#inscripcion" className="scroll-smooth">
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 hover:text-primary/90">
+                <Button
+                  size="lg"
+                  className="bg-white text-primary hover:bg-gray-100 hover:text-primary/90"
+                >
                   ¡Inscríbete ahora!
                 </Button>
               </Link>
@@ -139,6 +151,15 @@ export default function Home() {
                   width={180}
                   height={40}
                   className="h-12 w-auto"
+                  priority
+                />
+                <div className="w-px h-12 bg-white/20"></div>
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-libertad-digital-j8nYPzhCaGgISkDssFtkhiq17VaESp.png"
+                  alt="Libertad Digital Logo"
+                  width={180}
+                  height={40}
+                  className="h-12 w-auto bg-white rounded-lg p-2"
                   priority
                 />
                 <div className="w-px h-12 bg-white/20"></div>
@@ -176,15 +197,21 @@ export default function Home() {
       {/* Description Section */}
       <section id="programa" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">Sobre el Programa</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
+            Sobre el Programa
+          </h2>
           <p className="text-lg text-center max-w-4xl mx-auto mb-12">
-            Este plan está diseñado para formar desarrolladores de software con habilidades en frontend, backend, bases
-            de datos, arquitectura de software y despliegue en la nube, asegurando un aprendizaje práctico y progres
-            arquitectura de software y despliegue en la nube, asegurando un aprendizaje práctico y progresivo.
+            Este plan está diseñado para formar desarrolladores de software con
+            habilidades en frontend, backend, bases de datos, arquitectura de
+            software y despliegue en la nube, asegurando un aprendizaje práctico
+            y progres arquitectura de software y despliegue en la nube,
+            asegurando un aprendizaje práctico y progresivo.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold md:col-span-2">Características del Programa</h3>
+            <h3 className="text-xl font-bold md:col-span-2">
+              Características del Programa
+            </h3>
 
             <div className="flex items-start gap-3">
               <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
@@ -212,11 +239,18 @@ export default function Home() {
       {/* Curriculum Section */}
       <section id="plan-estudios" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">Plan de Estudios (10 Meses)</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
+            Plan de Estudios (10 Meses)
+          </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mesesContenido.map((mes) => (
-              <MesCard key={mes.numero} numero={mes.numero} titulo={mes.titulo} contenido={mes.contenido} />
+              <MesCard
+                key={mes.numero}
+                numero={mes.numero}
+                titulo={mes.titulo}
+                contenido={mes.contenido}
+              />
             ))}
           </div>
         </div>
@@ -225,37 +259,54 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="precios" className="py-16 bg-secondary/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8">Inversión y Modalidad</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8">
+            Inversión y Modalidad
+          </h2>
 
           <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
             <div className="mb-8">
-              <h3 className="text-xl font-bold mb-4 text-primary">Carrera Técnica 100% Virtual</h3>
+              <h3 className="text-xl font-bold mb-4 text-primary">
+                Carrera Técnica 100% Virtual
+              </h3>
               <p className="text-lg mb-4">
-                Formación completa en desarrollo de software desde la comodidad de tu hogar.
+                Formación completa en desarrollo de software desde la comodidad
+                de tu hogar.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="border border-gray-200 rounded-lg p-6">
-                <h4 className="font-bold text-lg mb-2 text-secondary">Inversión</h4>
+                <h4 className="font-bold text-lg mb-2 text-secondary">
+                  Inversión
+                </h4>
                 <p className="text-2xl font-bold mb-2">2,500 pesos</p>
                 <p className="text-sm text-gray-600">Inscripción única</p>
                 <div className="mt-4">
                   <p className="text-xl font-bold">5,000 pesos</p>
-                  <p className="text-sm text-gray-600">Mensualidad (10 cuotas)</p>
+                  <p className="text-sm text-gray-600">
+                    Mensualidad (10 cuotas)
+                  </p>
                 </div>
               </div>
 
               <div className="border border-gray-200 rounded-lg p-6">
-                <h4 className="font-bold text-lg mb-2 text-secondary">Duración del Programa</h4>
+                <h4 className="font-bold text-lg mb-2 text-secondary">
+                  Duración del Programa
+                </h4>
                 <p className="text-2xl font-bold mb-2">10 meses</p>
-                <p className="text-sm text-gray-600">40-60 horas por asignatura</p>
-                <p className="mt-4 text-sm">Clases en vivo y contenido a tu ritmo</p>
+                <p className="text-sm text-gray-600">
+                  40-60 horas por asignatura
+                </p>
+                <p className="mt-4 text-sm">
+                  Clases en vivo y contenido a tu ritmo
+                </p>
               </div>
             </div>
 
             <div className="text-left">
-              <h4 className="font-bold text-lg mb-4 text-primary">Ventajas de nuestra modalidad virtual:</h4>
+              <h4 className="font-bold text-lg mb-4 text-primary">
+                Ventajas de nuestra modalidad virtual:
+              </h4>
               <ul className="grid md:grid-cols-2 gap-4 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
@@ -287,7 +338,10 @@ export default function Home() {
 
           <div className="mt-8">
             <Link href="#inscripcion" className="scroll-smooth">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white"
+              >
                 Inscríbete Ahora
               </Button>
             </Link>
@@ -298,10 +352,12 @@ export default function Home() {
       {/* Inscription Form Section */}
       <section id="inscripcion" className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">¡Inscríbete Ahora!</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">
+            ¡Inscríbete Ahora!
+          </h2>
           <p className="text-lg max-w-2xl mx-auto mb-10">
-            Completa el siguiente formulario y un asesor académico se pondrá en contacto contigo para brindarte toda la
-            información que necesitas.
+            Completa el siguiente formulario y un asesor académico se pondrá en
+            contacto contigo para brindarte toda la información que necesitas.
           </p>
 
           <InscriptionForm />
@@ -312,10 +368,14 @@ export default function Home() {
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
-            Forma parte de Talendig y desarrolla aplicaciones web completas en 10 meses
+            Forma parte de Talendig y desarrolla aplicaciones web completas en
+            10 meses
           </h2>
           <Link href="#inscripcion" className="scroll-smooth">
-            <Button size="lg" className="bg-secondary hover:bg-primary/80 text-white">
+            <Button
+              size="lg"
+              className="bg-secondary hover:bg-primary/80 text-white"
+            >
               ¡Inscríbete ahora!
             </Button>
           </Link>
@@ -335,7 +395,9 @@ export default function Home() {
                 className="h-12 w-auto mb-4"
                 priority
               />
-              <p className="text-sm text-center md:text-left">Comunidad, Talento y Tecnología</p>
+              <p className="text-sm text-center md:text-left">
+                Comunidad, Talento y Tecnología
+              </p>
             </div>
 
             <div className="text-center md:text-left">
@@ -368,11 +430,9 @@ export default function Home() {
             <div className="text-center md:text-left">
               <h3 className="font-bold text-lg mb-4 text-primary">Dirección</h3>
               <p className="text-sm">
-                Av. José Ortega y Gasset No. 46
+                Av Simón Bolívar 902
                 <br />
-                Esq. Tételo Vargas, Ensanche Naco
-                <br />
-                Edificio Profesional Ortega
+                Ensanche La Julia
                 <br />
                 Santo Domingo, República Dominicana
               </p>
@@ -418,18 +478,20 @@ export default function Home() {
                   height={60}
                   className="rounded-full"
                 />
-                <p className="text-sm">Universidad Católica Santo Domingo (UCSD)</p>
+                <p className="text-sm">
+                  Universidad Católica Santo Domingo (UCSD)
+                </p>
               </div>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-200 text-center">
             <p className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Talendig. Todos los derechos reservados.
+              © {new Date().getFullYear()} Talendig. Todos los derechos
+              reservados.
             </p>
           </div>
         </div>
       </footer>
     </main>
-  )
+  );
 }
-
