@@ -175,7 +175,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-sm text-center md:text-right font-light">
-                Una colaboración entre Talendig y la
+                Una colaboración entre Talendig, Libertad Digital y la
                 <br />
                 Universidad Católica Santo Domingo (UCSD)
               </p>
