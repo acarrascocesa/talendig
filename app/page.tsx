@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { InscriptionForm } from "@/components/inscription-form";
+import { MondayForm } from "@/components/monday-form";
+
 import {
   Facebook,
   Instagram,
@@ -350,17 +352,20 @@ export default function Home() {
       </section>
 
       {/* Inscription Form Section */}
-      <section id="inscripcion" className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">
+      {/* Inscription Form Section */}
+      <section id="inscripcion" className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
             ¡Inscríbete Ahora!
           </h2>
-          <p className="text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-center max-w-2xl mx-auto mb-10">
             Completa el siguiente formulario y un asesor académico se pondrá en
             contacto contigo para brindarte toda la información que necesitas.
           </p>
 
-          <InscriptionForm />
+          <div className="max-w-4xl mx-auto">
+            <MondayForm />
+          </div>
         </div>
       </section>
 
