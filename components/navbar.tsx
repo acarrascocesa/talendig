@@ -55,7 +55,7 @@ export function Navbar() {
               alt="Talendig Logo"
               width={180}
               height={40}
-              className="h-8 w-auto"
+              className="h-12 w-auto"
               priority
             />
           </Link>
@@ -67,6 +67,9 @@ export function Navbar() {
             </Link>
             <Link href="#plan-estudios" className="text-sm font-medium hover:text-secondary transition-colors">
               Plan de Estudios
+            </Link>
+            <Link href="#requisitos" className="text-sm font-medium hover:text-secondary transition-colors">
+              Requisitos
             </Link>
             <Link href="#precios" className="text-sm font-medium hover:text-secondary transition-colors">
               Precios
@@ -106,6 +109,13 @@ export function Navbar() {
               onClick={closeMenu}
             >
               Plan de Estudios
+            </Link>
+            <Link
+              href="#requisitos"
+              className="block py-2 text-sm font-medium hover:text-secondary transition-colors"
+              onClick={closeMenu}
+            >
+              Requisitos
             </Link>
             <Link
               href="#precios"

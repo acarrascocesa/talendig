@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { MesCard } from "@/components/mes-card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
+import { Calendar, CheckCircle, FileText, GraduationCap, Heart, Laptop } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { InscriptionForm } from "@/components/inscription-form";
 import { MondayForm } from "@/components/monday-form";
+
 
 import {
   Facebook,
@@ -15,6 +16,8 @@ import {
   MessageCircle,
   Mail,
 } from "lucide-react";
+import { FAQ } from "@/components/faq";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   const mesesContenido = [
@@ -147,32 +150,40 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center md:items-end gap-6 md:w-1/2">
               <div className="flex items-center justify-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo%20full%20color%20%281%29-b2t7QqJOblwsIRJRt1QYHkvdgLXCoI.png"
-                  alt="Talendig Logo"
-                  width={180}
-                  height={40}
-                  className="h-12 w-auto"
-                  priority
-                />
-                <div className="w-px h-12 bg-white/20"></div>
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-libertad-digital-j8nYPzhCaGgISkDssFtkhiq17VaESp.png"
-                  alt="Libertad Digital Logo"
-                  width={180}
-                  height={40}
-                  className="h-12 w-auto bg-white rounded-lg p-2"
-                  priority
-                />
-                <div className="w-px h-12 bg-white/20"></div>
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cropped-Logo-UCSD-Redes-fondo-blanco-01-768x768-1-150x150-bIAryI10omxnZW5DNvdMvMh72sxexG.png"
-                  alt="Logo UCSD"
-                  width={60}
-                  height={60}
-                  className="rounded-full"
-                  priority
-                />
+                <div className="bg-white p-2 rounded-lg w-32 h-16 flex items-center justify-center">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo%20full%20color%20%281%29-b2t7QqJOblwsIRJRt1QYHkvdgLXCoI.png"
+                    alt="Talendig Logo"
+                    width={120}
+                    height={60}
+                    className="w-full h-full object-contain"
+                    priority
+                  />
+                </div>
+                <div className="w-px h-16 bg-white/20"></div>
+                <div className="bg-white p-2 rounded-lg w-32 h-16 flex items-center justify-center">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-libertad-digital-j8nYPzhCaGgISkDssFtkhiq17VaESp.png"
+                    alt="Libertad Digital Logo"
+                    width={120}
+                    height={60}
+                    className="w-full h-full object-contain"
+                    priority
+                  />
+                </div>
+                <div className="w-px h-16 bg-white/20"></div>
+
+
+                <div className="bg-white p-2 rounded-lg w-32 h-16 flex items-center justify-center">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cropped-Logo-UCSD-Redes-fondo-blanco-01-768x768-1-150x150-bIAryI10omxnZW5DNvdMvMh72sxexG.png"
+                    alt="Logo UCSD"
+                    width={120}
+                    height={60}
+                    className="w-full h-full object-contain"
+                    priority
+                  />
+                </div>
               </div>
               <p className="text-sm text-center md:text-right font-light">
                 Una colaboración entre Talendig, Libertad Digital y la
@@ -200,19 +211,18 @@ export default function Home() {
       <section id="programa" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
-            Sobre el Programa
+            Sobre la carrera técnica
           </h2>
           <p className="text-lg text-center max-w-4xl mx-auto mb-12">
-            Este plan está diseñado para formar desarrolladores de software con
-            habilidades en frontend, backend, bases de datos, arquitectura de
-            software y despliegue en la nube, asegurando un aprendizaje práctico
-            y progres arquitectura de software y despliegue en la nube,
-            asegurando un aprendizaje práctico y progresivo.
+            Esta carrera está diseñada para formar desarrolladores de software
+            con habilidades en frontend, backend, bases de datos, arquitectura
+            de software y despliegue en la nube, asegurando un aprendizaje
+            práctico y progresivo en cada una de estas áreas claves.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <h3 className="text-xl font-bold md:col-span-2">
-              Características del Programa
+              Características del programa
             </h3>
 
             <div className="flex items-start gap-3">
@@ -242,7 +252,7 @@ export default function Home() {
       <section id="plan-estudios" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
-            Plan de Estudios (10 Meses)
+            Plan de estudio (10 Meses)
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -258,17 +268,101 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Requisitos y Requerimientos Técnicos Section */}
+      <section id="requisitos" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">Requisitos y requerimientos técnicos</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                  Requisitos académicos
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Bachillerato completo</li>
+                  <li>No se requieren conocimientos previos específicos</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Calendar className="h-6 w-6 text-primary" />
+                  Edad mínima
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Tener al menos 18 años al momento de la inscripción.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <FileText className="h-6 w-6 text-primary" />
+                  Documentación requerida
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Cédula de Identidad o Pasaporte</li>
+                  <li>Copia del certificado de bachillerato</li>
+                  <li>Formulario de inscripción completado</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Laptop className="h-6 w-6 text-primary" />
+                  Requisitos técnicos
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Conexión a internet estable</li>
+                  <li>
+                    Equipo de computación:
+                    <ul className="list-circle pl-5 mt-2 space-y-1">
+                      <li>Computadora con procesador adecuado</li>
+                      <li>Mínimo 4 GB de RAM</li>
+                    </ul>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="md:col-span-2 lg:col-span-1">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Heart className="h-6 w-6 text-primary" />
+                  Otros requisitos
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Compromiso y dedicación para completar el programa con éxito.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="precios" className="py-16 bg-secondary/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-8">
-            Inversión y Modalidad
+            Inversión y modalidad
           </h2>
 
           <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4 text-primary">
-                Carrera Técnica 100% Virtual
+                Carrera técnica 100% virtual
               </h3>
               <p className="text-lg mb-4">
                 Formación completa en desarrollo de software desde la comodidad
@@ -293,7 +387,7 @@ export default function Home() {
 
               <div className="border border-gray-200 rounded-lg p-6">
                 <h4 className="font-bold text-lg mb-2 text-secondary">
-                  Duración del Programa
+                  Duración del programa
                 </h4>
                 <p className="text-2xl font-bold mb-2">10 meses</p>
                 <p className="text-sm text-gray-600">
@@ -344,7 +438,7 @@ export default function Home() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white"
               >
-                Inscríbete Ahora
+                Inscríbete ahora
               </Button>
             </Link>
           </div>
@@ -356,7 +450,7 @@ export default function Home() {
       <section id="inscripcion" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-            ¡Inscríbete Ahora!
+            ¡Inscríbete ahora!
           </h2>
           <p className="text-lg text-center max-w-2xl mx-auto mb-10">
             Completa el siguiente formulario y un asesor académico se pondrá en
@@ -365,6 +459,18 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto">
             <MondayForm />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+            Preguntas frecuentes
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <FAQ />
           </div>
         </div>
       </section>
