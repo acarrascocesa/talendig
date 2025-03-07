@@ -352,7 +352,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section 
       <section id="precios" className="py-16 bg-secondary/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-8">
@@ -444,8 +444,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
-      {/* Inscription Form Section */}
       {/* Inscription Form Section */}
       <section id="inscripcion" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
