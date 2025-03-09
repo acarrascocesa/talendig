@@ -45,9 +45,9 @@ export function Navbar() {
   }, [closeMenu])
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <nav className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -55,13 +55,13 @@ export function Navbar() {
               alt="Talendig Logo"
               width={180}
               height={40}
-              className="h-12 w-auto"
+              className="h-8 w-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6">
             <Link href="#programa" className="text-sm font-medium hover:text-secondary transition-colors">
               Programa
             </Link>
@@ -71,15 +71,15 @@ export function Navbar() {
             <Link href="#requisitos" className="text-sm font-medium hover:text-secondary transition-colors">
               Requisitos
             </Link>
-            <Link href="#precios" className="text-sm font-medium hover:text-secondary transition-colors">
-              Precios
+            <Link href="#modalidad" className="text-sm font-medium hover:text-secondary transition-colors">
+              Modalidad
             </Link>
             <Link href="#inscripcion">
               <Button variant="secondary" size="sm">
                 Inscríbete
               </Button>
             </Link>
-          </nav>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -89,12 +89,15 @@ export function Navbar() {
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div>
+        </nav>
       </div>
+
+      {/* Rounded bottom corners */}
+      <div className="hidden md:block h-4 bg-white rounded-b-3xl shadow-md"></div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-b shadow-md">
+        <div className="md:hidden bg-white shadow-md rounded-b-3xl">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <Link
               href="#programa"
@@ -118,11 +121,11 @@ export function Navbar() {
               Requisitos
             </Link>
             <Link
-              href="#precios"
+              href="#modalidad"
               className="block py-2 text-sm font-medium hover:text-secondary transition-colors"
               onClick={closeMenu}
             >
-              Precios
+              Modalidad
             </Link>
             <Link href="#inscripcion" className="block py-2" onClick={closeMenu}>
               <Button variant="secondary" size="sm" className="w-full">

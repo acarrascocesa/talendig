@@ -2,11 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { MesCard } from "@/components/mes-card";
 import { Button } from "@/components/ui/button";
-import { Calendar, CheckCircle, FileText, GraduationCap, Heart, Laptop } from "lucide-react";
+import {
+  Calendar,
+  CheckCircle,
+  FileText,
+  GraduationCap,
+  Heart,
+  Laptop,
+} from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { InscriptionForm } from "@/components/inscription-form";
 import { MondayForm } from "@/components/monday-form";
-
 
 import {
   Facebook,
@@ -173,7 +179,6 @@ export default function Home() {
                 </div>
                 <div className="w-px h-16 bg-white/20"></div>
 
-
                 <div className="bg-white p-2 rounded-lg w-32 h-16 flex items-center justify-center">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cropped-Logo-UCSD-Redes-fondo-blanco-01-768x768-1-150x150-bIAryI10omxnZW5DNvdMvMh72sxexG.png"
@@ -271,7 +276,9 @@ export default function Home() {
       {/* Requisitos y Requerimientos Técnicos Section */}
       <section id="requisitos" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">Requisitos y requerimientos técnicos</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
+            Requisitos y requerimientos técnicos
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card>
               <CardHeader>
@@ -345,24 +352,24 @@ export default function Home() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Compromiso y dedicación para completar el programa con éxito.</p>
+                <p>
+                  Compromiso y dedicación para completar el programa con éxito.
+                </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section 
-      <section id="precios" className="py-16 bg-secondary/10">
+      {/* Pricing Section */}
+      <section id="modalidad" className="py-16 bg-secondary/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8">
-            Inversión y modalidad
-          </h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8">Modalidad</h2>
 
           <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4 text-primary">
-                Carrera técnica 100% virtual
+                Carrera Técnica 100% Virtual
               </h3>
               <p className="text-lg mb-4">
                 Formación completa en desarrollo de software desde la comodidad
@@ -370,24 +377,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="border border-gray-200 rounded-lg p-6">
+            <div className="mb-8">
+              <div className="border border-gray-200 rounded-lg p-6 max-w-md mx-auto">
                 <h4 className="font-bold text-lg mb-2 text-secondary">
-                  Inversión
-                </h4>
-                <p className="text-2xl font-bold mb-2">2,500 pesos</p>
-                <p className="text-sm text-gray-600">Inscripción única</p>
-                <div className="mt-4">
-                  <p className="text-xl font-bold">5,000 pesos</p>
-                  <p className="text-sm text-gray-600">
-                    Mensualidad (10 cuotas)
-                  </p>
-                </div>
-              </div>
-
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h4 className="font-bold text-lg mb-2 text-secondary">
-                  Duración del programa
+                  Duración del Programa
                 </h4>
                 <p className="text-2xl font-bold mb-2">10 meses</p>
                 <p className="text-sm text-gray-600">
@@ -438,13 +431,12 @@ export default function Home() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white"
               >
-                Inscríbete ahora
+                Inscríbete Ahora
               </Button>
             </Link>
           </div>
         </div>
       </section>
-      */}
 
       {/* Inscription Form Section */}
       <section id="inscripcion" className="py-16 bg-gray-100">
