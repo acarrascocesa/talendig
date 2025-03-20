@@ -507,18 +507,18 @@ export default function Home() {
               <h3 className="font-bold text-lg mb-4 text-primary">Contacto</h3>
               <div className="space-y-2">
                 <a
-                  href="tel:+18096386271"
+                  href="tel:+18095442812"
                   className="flex items-center justify-center md:justify-start gap-2 hover:text-secondary transition-colors"
                 >
                   <Phone size={20} />
-                  <span>809-638-6271 Ext. 3320</span>
+                  <span>809-544-2812 Ext. 2313</span>
                 </a>
                 <a
-                  href="https://wa.me/18492204934"
+                  href="https://wa.me/18494734934"
                   className="flex items-center justify-center md:justify-start gap-2 hover:text-secondary transition-colors"
                 >
                   <MessageCircle size={20} />
-                  <span>849-220-4934</span>
+                  <span>849-473-4934</span>
                 </a>
                 <a
                   href="mailto:info@talendig.com"
